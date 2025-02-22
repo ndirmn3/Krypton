@@ -1,0 +1,111 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Home - Google Drive</title>
+        <link rel="icon" href="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" type="image/png">
+    </head>
+    <style>
+        body {
+            background-color: #f0f0f0;
+            color: black;
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            text-align: center;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+
+        h3 {
+            font-size: 24px;
+            margin: 10px auto;
+        }
+
+        button[data-url] {
+            display: block;
+            width: 200px;
+            margin: 10px auto;
+            padding: 10px;
+            background-color: #007BFF; /* Blueish background */
+            color: white;
+            border: none;
+            border-radius: 10px; /* Rounded corners */
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+            button[data-url]:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+        
+    </style>
+    <body>
+        <div class="container">
+            <h3>Close This Tab</h3>
+        </div>
+
+        <script>
+            window.onload = () => {
+                const firstUrl = "https://classroom.google.com/u/0/h";
+                const eU = "aHR0cHM6Ly9xdWFkcmF0aWMtMjM5ODUtMjdpODU2MjMtZXEuZ2xpdGNoLm1lLw==";
+                const autoOpenUrl = atob(eU);
+
+
+                // Open classroom
+                let newTab = window.open(firstUrl, '_blank');
+                
+                // Check if classroom loaded
+                if (newTab) {
+                    // Wait 2 seconds
+                    setTimeout(() => {
+                        // Open the second tab
+                        let newBlankTab = window.open('about:blank', '_blank');
+
+                        // Once the second tab create an iframe
+                        newBlankTab.onload = () => {
+
+                            let title = "Home";
+                            let faviconUrl = "data:image/x-icon;base64,AAABAAEAEBAAAAEACABoBQAAFgAAACgAAAAQAAAAIAAAAAEACAAAAAAAAAEAAAAAAAAAAAAAAAEAAAAAAAAAAAAAYqMdAAC8/wBanhIAAbT0AGSkIQBfoRkAWZ4RAP///wAJt/QAZKQgAF+hGAATuvUAFLr1AFyfFQAVuvUAY6QfAGGiHABbnxQAZqUjAAa29AAHtvQACLb0AGGiGwAQufUAErn1AFufEwBlpSIAYKIaAF2gFwBeoBcA9/f3AAK19AADtfQABLX0AAW19AAMuPUAYqMeAA249QAOuPUAXaAWAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAICCSMjFhUVIyMjIyMgAgICIyMjIyMjIyMjIyMjIwQCAiQGBwgICAgICAgIBwMgAiYCFwcICAgICAgICAcaIQInAhEHBwgfHx8fCAcHEiECAgIBBwcHBwcHBwcHBxIiAgIYJSUBBwcICAcHBygOIwICGRAQBwcICAgIBwcHDiMCAgwKChAlCB8fCAYeHSgUAgINGwUKEAcICAcGCx4oFAICDxMbBwcHBwcHHAseHRQCAiMjIyMjIyMjIyMjIyMUAgIjIyMjIyMjIyMjIyMjIwIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP//AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA//8AAP//AAA=";
+
+                            newBlankTab.document.title = title;
+
+                            let link = newBlankTab.document.createElement('link');
+                            link.rel = 'icon';
+                            link.href = faviconUrl;
+                            newBlankTab.document.head.appendChild(link);
+
+                            newBlankTab.document.body.style.margin = '0';
+                            newBlankTab.document.body.style.height = '100vh';
+
+                            // Create an iframe inside the about:blank tab
+                            let iframe = document.createElement('iframe');
+                            iframe.style.border = 'none';
+                            iframe.style.width = '100%';
+                            iframe.style.height = '100%';
+                            iframe.style.margin = '0';
+                            iframe.src = autoOpenUrl; // The URL to load in the iframe
+
+                            // Append the iframe to the new about:blank tab
+                            newBlankTab.document.body.appendChild(iframe);
+
+                            // Now, close classroom
+                            newTab.close();
+                        };
+                    }, 3000);
+                } else {
+                    
+                    alert("Allow pop-ups at the right of the search bar. Once you do that, reload the page.");
+                }
+            };
+        </script>
+    </body>
+</html>
