@@ -5,8 +5,8 @@ Krypton has a powerful collection of utilities that can help bypass school restr
 1. Open https://kryptontools.pages.dev/.
 2. Allow popups at the right side of the search bar and reload (If you haven't already.)
 4. Once it opens http://classroom.google.com/u/0/h, it should load a 404 page not found error in a couple of seconds.
-5. To get around this, type "404pnf" and press right shift.
-6. If nothing happens you typoed something so, redo steps 1-5.
+5. To get around this, type "404pnf" and press right shift (Think of it as an invisible input box.)
+6. If nothing happens you typoed something so redo steps 1-5 or simply press Ctrl + A and re-enter "404pnf" then press right shift.
 7. Once you press right shift, it should load the main site.
 
 # Features
