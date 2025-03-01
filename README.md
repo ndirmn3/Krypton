@@ -5,14 +5,15 @@ Krypton has a powerful collection of utilities that can help bypass school restr
 1. Open https://kryptontools.pages.dev/.
 2. Allow popups at the right side of the search bar and reload (If you haven't already.)
 4. Once it opens http://classroom.google.com/u/0/h, it should load a 404 page not found error in a couple of seconds.
-5. To get around this, type "404pnf" and press right shift (Think of it as an invisible input box.)
-6. If nothing happens you typoed something so redo steps 1-5 or simply press Ctrl + A and re-enter "404pnf" then press right shift.
+5. To get around this, type "404pnf" and press right shift (It is just an invisible input box that auto selects itself)
+6. If nothing happens you typoed something so redo steps 1-4 or simply press Ctrl + A and re-enter "404pnf" then press right shift.
 7. Once you press right shift, it should load the main site.
 
 # Features
-1. about:blank opener: Cloak any page with about:blank.
-2. data:url Generator: Generate data URLs, a tool for opening files directly in the browser (code contributed by @Blobby Boi).
-3. Extension Disabler: Disable unwanted browser extensions to create a clean browsing environment.
-4. Bypass Restrictions: A set of tools that helps bypass school or browsing restrictions.
+1. about:blank Opener: Cloak any page with about:blank.
+2. data: URL Opener: Open any page using a data: URL link.
+3. data: URL Generator: Generate data URLs, a tool for opening files directly in the browser (code contributed by @Blobby Boi).
+4. Extension Disabler: Disable unwanted browser extensions to create a clean browsing environment.
+5. Bypass Restrictions: A set of tools that helps bypass school or browsing restrictions.
 
 http://kryptontools.pages.dev/
