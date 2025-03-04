@@ -1,5 +1,5 @@
 # Krypton
-Krypton has a powerful collection of utilities that can help bypass school restrictions. Krypton provides features such as an about:blank opener, a data:url generator (thx to Blobby Boi for some of the code), and tools to disable browser extensions.
+Krypton has a powerful collection of utilities that can help bypass school restrictions. Krypton provides features such as an about:blank opener, a data:text URL opener and generator (thx to Blobby Boi for some of the code), and tools to disable browser extensions.
 
 # Usage
 1. Open https://kryptontools.pages.dev/.
