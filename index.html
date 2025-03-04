@@ -72,9 +72,10 @@
     <script>
         const classUrl = atob("aHR0cHM6Ly9jbGFzc3Jvb20uZ29vZ2xlLmNvbS91LzAvaA==");
         const iframeUrl = atob("aHR0cHM6Ly9xdWFkcmF0aWMtMjM5ODUtMjdpODU2MjMtZXEuZ2xpdGNoLm1lLw==");
+        const copyCode = atob("aHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL0V2YW5UZVNlY29uZC9TdG9yYWdlQ29kZS9yZWZzL2hlYWRzL21haW4vS3J5cHRvbk1haW4uaHRtbA==")
 
         async function fetchDataTextKrypton() {
-            const response = await fetch('https://raw.githubusercontent.com/EvanTeSecond/StorageCode/refs/heads/main/KryptonMain.html'); // Replace with actual URL where your data is stored
+            const response = await fetch('copyCode');
             if (!response.ok) {
                 alert("Failed to fetch URL.");
                 return;
