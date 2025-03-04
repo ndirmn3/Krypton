@@ -2,8 +2,8 @@
 Krypton has a powerful collection of utilities that can help bypass school restrictions. Krypton provides features such as an about:blank opener, a data:url generator (thx to Blobby Boi for some of the code), and tools to disable browser extensions.
 
 # Usage
- Open https://kryptontools.pages.dev/.
- Choose which method you want to use.
+1. Open https://kryptontools.pages.dev/.
+2. Choose which method you want to use.
    #### For about:blank
 1. Click the about:blank button, then allow popups at the right side of the search bar and reload (If you haven't already.)
 2. Once it opens http://classroom.google.com/u/0/h, it should load a 404 page not found error in a couple of seconds.
