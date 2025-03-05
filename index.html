@@ -60,12 +60,27 @@
     button:hover {
         background-color: #0056b3;
     }
+
+    h4 {
+        margin: 0px;
+    }
+
+    p {
+        font-size: 14px;
+    }
+
 </style>
 <body>
     <div class="container">
         <h3>Open With:</h3>
         <button id="aboutBlankBtn">about:blank</button>
         <button id="dataUrlBtn">data:text URL</button>
+        <br>
+        <br>
+        <h4>Ensure that popups are allowed:</h4>
+        <br>
+        <p>1. Open chrome://settings/content/popups</p>
+        <p>2. Enable "Sites can send pop-ups and use redirects"</p>
         <div id="popup" class="popup">URL copied to clipboard!</div>
     </div>
 
