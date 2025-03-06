@@ -3,10 +3,11 @@ Krypton has a powerful collection of utilities that can help bypass school restr
 
 # Usage
 1. Open https://kryptontools.pages.dev/.
-2. Choose which method you want to use.
-   Ensure that popups are allowed (If you haven't already)
+   ##### Ensure that popups are allowed (If you haven't already)
 1. Open chrome://settings/content/popups
 2. Enable "Sites can send pop-ups and use redirects"
+   <br>
+   Choose which method you want to use.
    #### For about:blank
 1. Click the about:blank button.
 2. Once it opens https://classroom.google.com/u/0/h, it should load a 404 page not found error in a couple of seconds.
