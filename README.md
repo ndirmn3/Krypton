@@ -7,6 +7,7 @@ Krypton has a powerful collection of utilities that can help bypass school restr
 1. Open chrome://settings/content/popups
 2. Enable "Sites can send pop-ups and use redirects"
    <br>
+   <br>
    Choose which method you want to use.
    #### For about:blank
 1. Click the about:blank button.
