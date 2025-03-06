@@ -138,24 +138,10 @@
                 const htmlContent = `
                     <!DOCTYPE html>
                     <html>
-                    <head>
-                        <style>
-                            body, html {
-                                margin: 0;
-                                padding: 0;
-                                height: 100%;
-                                overflow: hidden;
-                            }
-                            iframe {
-                                width: 100%;
-                                height: 100%;
-                                border: none;
-                            }
-                        </style>
-                    </head>
-                    <body>
-                        <iframe src="https://u8hwxxvlys7jekt2nmys11zwvuirhmuwyduxwr3vrstuharu6qmhds2x7l.pages.dev" frameborder="0"></iframe>
-                    </body>
+                        <head>
+                        </head>
+                        <body>
+                        </body>
                     </html>
                 `;
                 
@@ -184,7 +170,7 @@
                             iframe.style.margin = '0';
                             iframe.referrerpolicy = "no-referrer";
                             iframe.allow = "fullscreen";
-                            iframe.src = "https://u8hwxxvlys7jekt2nmys11zwvuirhmuwyduxwr3vrstuharu6qmhds2x7l.pages.dev";
+                            iframe.src = firstURL;
                             newBlankTab.document.body.appendChild(iframe);
         
                             newTab.close();
