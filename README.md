@@ -31,7 +31,6 @@ Krypton has a powerful collection of utilities that can help bypass school restr
 
 # Features
 1. About Blank Opener: Cloak any page with about:blank.
-2. Data URL Opener: Open any page using a data:text link.
 3. Data URL Generator: Generate data URLs, a tool for opening files directly in the browser (code contributed by @Blobby Boi).
 4. Extension Disabler: Disable unwanted browser extensions to create a clean browsing environment.
 5. Bypass Restrictions: A set of tools that helps bypass school or browsing restrictions.
