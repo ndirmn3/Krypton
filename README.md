@@ -1,6 +1,6 @@
 # Krypton
 <img src="https://img.shields.io/github/release/EvanTeSecond/Krypton.svg?color=82d2f0&labelColor=0d3b72&style=for-the-badge" alt="Release"/>
-<br>
+
 Krypton has a powerful collection of utilities that can help bypass school restrictions. Krypton provides features such as an about:blank opener, a data:text URL opener and generator (thx to Blobby Boi for some of the code), and tools to disable browser extensions.
 
 # Usage
