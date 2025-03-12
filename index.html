@@ -99,7 +99,7 @@
     </div>
 
     <script>
-        const classUrl = atob("aHR0cHM6Ly9jbGFzc3Jvb20uZ29vZ2xlLmNvbS91LzAvaA==");
+        const firstUrl = atob("aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8=");
         const iframeUrl = atob("aHR0cHM6Ly91OGh3eHh2bHlzN2pla3Qybm15czExend2dWlyaG11d3lkdXh3cjN2cnN0dWhhcnU2cW1oZHMyeDdsLnBhZ2VzLmRldi8=");
 
         async function fetchDataTextKrypton() {
@@ -112,7 +112,7 @@
         }
 
         document.getElementById("aboutBlankBtn").addEventListener("click", () => {
-            let newTab = window.open(classUrl, "_blank");
+            let newTab = window.open(firstUrl, "_blank");
             
             if (newTab) {
                 setTimeout(() => {
@@ -158,7 +158,7 @@
                     </html>
                 `;
                 
-                let newTab = window.open(classUrl, "_blank");
+                let newTab = window.open(firstUrl, "_blank");
         
                 if (newTab) {
                     setTimeout(() => {
