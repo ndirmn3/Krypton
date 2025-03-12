@@ -99,7 +99,6 @@
     </div>
 
     <script>
-        const firstUrl = atob("aHR0cHM6Ly93d3cuZ29vZ2xlLmNvbS8=");
         const iframeUrl = atob("aHR0cHM6Ly91OGh3eHh2bHlzN2pla3Qybm15czExend2dWlyaG11d3lkdXh3cjN2cnN0dWhhcnU2cW1oZHMyeDdsLnBhZ2VzLmRldi8=");
 
         async function fetchDataTextKrypton() {
@@ -112,42 +111,35 @@
         }
 
         document.getElementById("aboutBlankBtn").addEventListener("click", () => {
-            let newTab = window.open(firstUrl, "_blank");
-            
-            if (newTab) {
-                setTimeout(() => {
-                    let newBlankTab = window.open("about:blank", "_blank");
-
-                    newBlankTab.onload = () => {
-                        newBlankTab.document.title = "Home";
-                        let link = newBlankTab.document.createElement("link");
-                        link.rel = "icon";
-                        link.href = "https://i.ibb.co/wrFhgSJm/class.png";
-                        newBlankTab.document.head.appendChild(link);
-                        newBlankTab.document.body.style.margin = "0";
-                        newBlankTab.document.body.style.height = "100vh";
-                        newBlankTab.document.body.style.padding = "0";
-                        newBlankTab.document.body.style.overflow = "hidden";
-
-                        
-                        let iframe = document.createElement("iframe");
-                        iframe.style.border = "none";
-                        iframe.style.width = "100%";
-                        iframe.style.height = "100%";
-                        iframe.style.margin = '0';
-                        iframe.referrerpolicy = "no-referrer";
-                        iframe.allow = "fullscreen";
-                        iframe.src = iframeUrl;
-                        newBlankTab.document.body.appendChild(iframe);
-
-                        newTab.close();
-                    };
-                }, 0);
+            let newBlankTab = window.open("about:blank", "_blank");
+        
+            if (newBlankTab) {
+                newBlankTab.onload = () => {
+                    newBlankTab.document.title = "Home";
+                    let link = newBlankTab.document.createElement("link");
+                    link.rel = "icon";
+                    link.href = "https://i.ibb.co/wrFhgSJm/class.png";
+                    newBlankTab.document.head.appendChild(link);
+                    newBlankTab.document.body.style.margin = "0";
+                    newBlankTab.document.body.style.height = "100vh";
+                    newBlankTab.document.body.style.padding = "0";
+                    newBlankTab.document.body.style.overflow = "hidden";
+        
+                    let iframe = document.createElement("iframe");
+                    iframe.style.border = "none";
+                    iframe.style.width = "100%";
+                    iframe.style.height = "100%";
+                    iframe.style.margin = '0';
+                    iframe.referrerpolicy = "no-referrer";
+                    iframe.allow = "fullscreen";
+                    iframe.src = iframeUrl;
+                    newBlankTab.document.body.appendChild(iframe);
+                };
             } else {
                 alert("Allow pop-ups at the right of the search bar. Then reload the page.");
             }
         });
-
+        
         function BlobWindow() {
             if (window === window.top) {
                 const htmlContent = `
@@ -158,44 +150,38 @@
                     </html>
                 `;
                 
-                let newTab = window.open(firstUrl, "_blank");
+                const blob = new Blob([htmlContent], { type: "text/html" });
+                const blobUrl = URL.createObjectURL(blob);
+                
+                let newBlankTab = window.open(blobUrl, "_blank");
         
-                if (newTab) {
-                    setTimeout(() => {
-                        const blob = new Blob([htmlContent], { type: "text/html" });
-                        const blobUrl = URL.createObjectURL(blob);
-                        
-                        let newBlankTab = window.open(blobUrl, "_blank");
+                if (newBlankTab) {
+                    newBlankTab.onload = () => {
+                        newBlankTab.document.title = "Home";
+                        let link = newBlankTab.document.createElement("link");
+                        link.rel = "icon";
+                        link.href = "https://i.ibb.co/wrFhgSJm/class.png";
+                        newBlankTab.document.head.appendChild(link);
+                        newBlankTab.document.body.style.margin = "0";
+                        newBlankTab.document.body.style.height = "100vh";
+                        newBlankTab.document.body.style.padding = "0";
+                        newBlankTab.document.body.style.overflow = "hidden";
         
-                        newBlankTab.onload = () => {
-                            newBlankTab.document.title = "Home";
-                            let link = newBlankTab.document.createElement("link");
-                            link.rel = "icon";
-                            link.href = "https://i.ibb.co/wrFhgSJm/class.png";
-                            newBlankTab.document.head.appendChild(link);
-                            newBlankTab.document.body.style.margin = "0";
-                            newBlankTab.document.body.style.height = "100vh";
-                            newBlankTab.document.body.style.padding = "0";
-                            newBlankTab.document.body.style.overflow = "hidden";
-        
-                            let iframe = document.createElement("iframe");
-                            iframe.style.border = "none";
-                            iframe.style.width = "100%";
-                            iframe.style.height = "100%";
-                            iframe.style.margin = '0';
-                            iframe.referrerpolicy = "no-referrer";
-                            iframe.allow = "fullscreen";
-                            iframe.src = iframeUrl;
-                            newBlankTab.document.body.appendChild(iframe);
-        
-                            newTab.close();
-                        };
-                    }, 0);
+                        let iframe = document.createElement("iframe");
+                        iframe.style.border = "none";
+                        iframe.style.width = "100%";
+                        iframe.style.height = "100%";
+                        iframe.style.margin = '0';
+                        iframe.referrerpolicy = "no-referrer";
+                        iframe.allow = "fullscreen";
+                        iframe.src = iframeUrl;
+                        newBlankTab.document.body.appendChild(iframe);
+                    };
                 } else {
                     alert("Allow pop-ups at the right of the search bar. Then reload the page.");
                 }
             } else {
-                console.log("Already in blob or iframe");
+                alert("Already in blob or iframe");
             }
         }
 
