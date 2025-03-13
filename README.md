@@ -1,7 +1,7 @@
 # Krypton
 <img src="https://img.shields.io/github/release/EvanTeSecond/Krypton.svg?color=82d2f0&labelColor=0d3b72&style=for-the-badge" alt="Release"/>
 
-Krypton has a powerful collection of utilities that can help bypass school restrictions. Krypton provides features such as an about:blank opener, a data:text URL opener and generator (thx to Blobby Boi for some of the code), and tools to disable browser extensions.
+Krypton has a powerful collection of utilities that can help bypass school restrictions. Krypton provides features such as an about:blank opener, a data:text URL opener and generator (thx to Blobby Boi for some of the code), and tools to disable browser extensions. Krypton also offers multiple games.
 
 # Usage
 1. Open https://kryptontools.pages.dev/ or https://kryptontools.glitch.me/.
@@ -14,6 +14,7 @@ Krypton has a powerful collection of utilities that can help bypass school restr
 
 
 # Features
+1. Games
 1. About Blank Opener: Cloak any page with about:blank.
 3. Data URL Generator: Generate data URLs, a tool for opening files directly in the browser (code contributed by @Blobby Boi).
 4. Windows on ChromeOS: Allows you to access Windows 10 on ChromeOS
