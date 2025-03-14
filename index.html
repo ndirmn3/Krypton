@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -248,6 +249,9 @@
                     iframe.allow = "fullscreen";
                     iframe.src = iframeUrl;
                     newBlankTab.document.body.appendChild(iframe);
+                    setTimeout(() => {
+                        window.location.replace("https://www.google.com/");
+                    }, 2000);
                 };
             } else {
                 alert("Allow pop-ups at the right of the search bar. Then reload the page.");
@@ -289,6 +293,9 @@
                     iframe.allow = "fullscreen";
                     iframe.src = iframeUrl;
                     newBlankTab.document.body.appendChild(iframe);
+                    setTimeout(() => {
+                        window.location.replace("https://www.google.com/");
+                    }, 2000);
                 };
             } else {
                 alert("Allow pop-ups at the right of the search bar. Then reload the page.");
