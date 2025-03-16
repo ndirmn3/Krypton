@@ -231,32 +231,46 @@
         document.getElementById("aboutBlankBtn").addEventListener("click", () => {
             let newBlankTab = window.open("about:blank", "_blank");
             if (newBlankTab) {
-                newBlankTab.onload = () => {
-                    newBlankTab.document.title = "Google";
-                    let link = newBlankTab.document.createElement("link");
-                    link.rel = "icon";
-                    link.href = "https://i.ibb.co/gZG0HCZq/google.png";
-                    newBlankTab.document.head.appendChild(link);
-                    newBlankTab.document.body.style.margin = "0";
-                    newBlankTab.document.body.style.height = "100vh";
-                    newBlankTab.document.body.style.padding = "0";
-                    newBlankTab.document.body.style.overflow = "hidden";
+                newBlankTab.document.write(`
+                    <!DOCTYPE html>
+                    <html>
+                    <head>
+                        <title>Google</title>
+                        <link rel="icon" type="image/png" href="https://i.ibb.co/gZG0HCZq/google.png">
+                        <meta charset="UTF-8">
+                        <style>
+                            body {
+                                margin: 0;
+                                height: 100vh;
+                                padding: 0;
+                                overflow: hidden;
+                            }
+                        </style>
+                    </head>
+                    <body>
+                    </body>
+                    </html>
+                `);
 
-                    let iframe = document.createElement("iframe");
-                    iframe.style.border = "none";
-                    iframe.style.width = "100%";
-                    iframe.style.height = "100%";
-                    iframe.style.margin = '0';
-                    iframe.referrerpolicy = "no-referrer";
-                    /* iframe.allow = "fullscreen"; */
-                    iframe.allow = "clipboard-read clipboard-write; fullscreen; camera; microphone; autoplay";
-                    iframe.sandbox = "allow-scripts allow-same-origin allow-popups allow-forms allow-modals allow-downloads";
-                    iframe.src = iframeUrl;
-                    newBlankTab.document.body.appendChild(iframe);
+                newBlankTab.document.close();
+
+                let iframe = newBlankTab.document.createElement("iframe");
+                iframe.style.border = "none";
+                iframe.style.width = "100%";
+                iframe.style.height = "100%";
+                iframe.style.margin = '0';
+                iframe.referrerpolicy = "no-referrer";
+                iframe.allow = "clipboard-read clipboard-write; fullscreen; camera; microphone; autoplay";
+                iframe.sandbox = "allow-scripts allow-same-origin allow-popups allow-forms allow-modals allow-downloads";
+                iframe.src = iframeUrl;
+
+                iframe.onload = function() {
                     setTimeout(() => {
                         window.location.replace("https://www.google.com/");
                     }, 2000);
                 };
+
+                newBlankTab.document.body.appendChild(iframe);
             } else {
                 alert("Allow pop-ups at the right of the search bar. Then reload the page.");
             }
@@ -264,11 +278,24 @@
 
         function BlobWindow() {
             const htmlContent = `
-            <!DOCTYPE html>
-            <html>
+                <!DOCTYPE html>
+                <html>
+                <head>
+                    <title>Google</title>
+                    <link rel="icon" type="image/png" href="https://i.ibb.co/gZG0HCZq/google.png">
+                    <meta charset="UTF-8">
+                    <style>
+                        body {
+                            margin: 0;
+                            height: 100vh;
+                            padding: 0;
+                            overflow: hidden;
+                        }
+                    </style>
+                </head>
                 <body>
                 </body>
-            </html>
+                </html>
             `;
 
             const blob = new Blob([htmlContent], { type: "text/html" });
@@ -299,9 +326,11 @@
                     iframe.sandbox = "allow-scripts allow-same-origin allow-popups allow-forms allow-modals allow-downloads";
                     iframe.src = iframeUrl;
                     newBlankTab.document.body.appendChild(iframe);
-                    setTimeout(() => {
-                        window.location.replace("https://www.google.com/");
-                    }, 2000);
+                    iframe.onload = function() {
+                        setTimeout(() => {
+                            window.location.replace("https://www.google.com/");
+                        }, 2000);
+                    };
                 };
             } else {
                 alert("Allow pop-ups at the right of the search bar. Then reload the page.");
