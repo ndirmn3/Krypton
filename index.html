@@ -253,7 +253,11 @@
                 `);
 
                 newBlankTab.document.close();
-
+                newBlankTab.document.title = "Google";
+                let link = newBlankTab.document.createElement("link");
+                link.rel = "icon";
+                link.href = "https://i.ibb.co/gZG0HCZq/google.png";
+              
                 let iframe = newBlankTab.document.createElement("iframe");
                 iframe.style.border = "none";
                 iframe.style.width = "100%";
@@ -267,7 +271,7 @@
                 iframe.onload = function() {
                     setTimeout(() => {
                         window.location.replace("https://www.google.com/");
-                    }, 2000);
+                    }, 500);
                 };
 
                 newBlankTab.document.body.appendChild(iframe);
@@ -326,10 +330,11 @@
                     iframe.sandbox = "allow-scripts allow-same-origin allow-popups allow-forms allow-modals allow-downloads";
                     iframe.src = iframeUrl;
                     newBlankTab.document.body.appendChild(iframe);
+                  
                     iframe.onload = function() {
                         setTimeout(() => {
                             window.location.replace("https://www.google.com/");
-                        }, 2000);
+                        }, 500);
                     };
                 };
             } else {
