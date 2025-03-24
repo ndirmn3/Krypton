@@ -23,5 +23,6 @@ Krypton has a powerful collection of utilities that can help bypass school restr
 7. Bypass Restrictions: A set of tools that helps bypass school or browsing restrictions.
 
 ## Todo
-1. useful bookmarklets
-2. more games and apps
+1. useful bookmarklets (fetches code)
+2. finish eaglercraft client launcher (fetches code)
+3. more games and apps
