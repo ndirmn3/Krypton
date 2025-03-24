@@ -21,3 +21,7 @@ Krypton has a powerful collection of utilities that can help bypass school restr
 5. Set of instructions to create proxy links
 6. Extension Disabler: Disable unwanted browser extensions to create a clean browsing environment.
 7. Bypass Restrictions: A set of tools that helps bypass school or browsing restrictions.
+
+## Todo
+1. useful bookmarklets
+2. more games and apps
