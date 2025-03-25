@@ -24,5 +24,5 @@ Krypton has a powerful collection of utilities that can help bypass school restr
 
 ## Todo
 1. useful bookmarklets (fetches code)
-2. finish eaglercraft client launcher (fetches code)
+2. add more eaglercraft clients?
 3. more games and apps
