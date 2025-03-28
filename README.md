@@ -4,7 +4,7 @@
 Krypton has a powerful collection of utilities that can help bypass school restrictions. Krypton provides features such as an about:blank opener, a data:text URL opener and generator (thx to Blobby Boi for some of the code), and tools to disable browser extensions. Krypton also offers multiple games.
 
 # Usage
-1. Open https://kryptontools.pages.dev/ or https://kryptontools.glitch.me/.
+1. Open https://kryptontools.pages.dev/ or https://kryptontools.glitch.me/ or https://evantesecond.github.io/Kryptontools/.
 2. There are 3 options to open Krypton with.
    about:blank cloaks with an about:blank URL
    blob:https cloaks with a blob:https followed by a temporary URL
@@ -21,6 +21,7 @@ Krypton has a powerful collection of utilities that can help bypass school restr
 5. Set of instructions to create proxy links
 6. Extension Disabler: Disable unwanted browser extensions to create a clean browsing environment.
 7. Bypass Restrictions: A set of tools that helps bypass school or browsing restrictions.
+8. Eaglercraft Instructions
 
 ## Todo
 1. useful bookmarklets (fetches code)
