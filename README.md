@@ -1,10 +1,9 @@
 # Krypton
-<img src="https://img.shields.io/github/release/EvanTeSecond/Krypton.svg?color=82d2f0&labelColor=0d3b72&style=for-the-badge" alt="Release"/>
+<img src="https://img.shields.io/github/release/ndirmn3/Krypton.svg?color=82d2f0&labelColor=0d3b72&style=for-the-badge" alt="Release"/>
 
-Krypton has a powerful collection of utilities that can help bypass school restrictions. Krypton provides features such as an about:blank opener, a data:text URL opener and generator (thx to Blobby Boi for some of the code), and tools to disable browser extensions. Krypton also offers multiple games.
 
 # Usage
-1. Open https://kryptontools.pages.dev/ or https://kryptontools.glitch.me/ or https://evantesecond.github.io/Kryptontools/.
+1. Find a working link (for you) here: https://tinyurl.com/kryptonlinks.
 2. There are 3 options to open Krypton with.
    about:blank cloaks with an about:blank URL
    blob:https cloaks with a blob:https followed by a temporary URL
