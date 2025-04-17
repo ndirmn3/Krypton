@@ -1,6 +1,8 @@
 # Krypton
 <img src="https://img.shields.io/github/release/ndirmn3/Krypton.svg?color=82d2f0&labelColor=0d3b72&style=for-the-badge" alt="Release"/>
 
+# Discord:
+https://discord.gg/KDAfkj6PXp
 
 # Usage
 1. Find a working link (for you) here: https://tinyurl.com/kryptonlinks.
