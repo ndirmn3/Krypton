@@ -1,3 +1,5 @@
+# Krypton will no longer be updated as it has been succeeded by Hydrogen, a collaborative project between Catsploit and Krypton.
+
 # Krypton
 <img src="https://img.shields.io/github/release/ndirmn3/Krypton.svg?color=82d2f0&labelColor=0d3b72&style=for-the-badge" alt="Release"/>
 
