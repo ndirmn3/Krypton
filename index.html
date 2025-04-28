@@ -1,5 +1,3 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,392 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home - Google Drive</title>
     <link rel="icon" href="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_32dp.png" type="image/png">
-    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
     <style>
-        #particles-js {
-            position: fixed;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            top: 0;
-            left: 0;
-        }
-
         body {
             background-color: #f0f0f0;
             color: black;
             font-family: sans-serif;
+            height: 100vh;
+            margin: 0;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
-            text-align: center;
         }
 
         .container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
             text-align: center;
         }
 
-        h3, h5, p {
-            margin: 5px;
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 10px 0 0 0;
         }
 
-        button {
-            display: block;
-            width: 200px;
-            margin: 10px auto;
-            padding: 10px;
-            color: #0056b3;
-            border-radius: 10px;
-            font-size: 16px;
-            cursor: pointer;
-            outline: none;
-            background: transparent;
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-            position: relative;
-            overflow: hidden;
-            backdrop-filter: blur(8px);
-            border: 1px solid rgba(0, 123, 255, 1);
-        }
-
-        button:hover {
-            color: white;
-            transform: translateY(-6px);
-            background: rgba(0, 123, 255, 0.6);
-            border-color: transparent;
-            box-shadow: 
-                0 4px 25px rgba(0, 0, 0, 0.15),
-                0 0 20px rgba(0, 123, 255, 0.2);
-        }
-        
-
-        .toggle-container {
-            display: flex;
-            flex-direction: column;
-            margin-top: 20px;
-            align-items: center;
-        }
-        
-        .second-toggle-container {
-            display: flex;
-            flex-direction: column;
-            margin-top: 20px;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        
-        .toggle.second-toggle {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        
-
-        .toggle {
-            position: relative;
-            display: block;
-            width: 60px;
-            height: 34px;
-            margin: 10px 0;
-        }
-
-        .toggle input {
-            opacity: 0;
-            width: 0;
-            height: 0;
-        }
-
-        .slider {
-            position: absolute;
-            cursor: pointer;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: #ccc;
-            transition: .4s;
-            border-radius: 34px;
-        }
-
-        .slider:before {
-            position: absolute;
-            content: "";
-            height: 26px;
-            width: 26px;
-            left: 4px;
-            bottom: 4px;
-            background-color: white;
-            transition: .4s;
-            border-radius: 50%;
-        }
-
-        input:checked + .slider {
-            background-color: #007BFF;
-        }
-
-        input:checked + .slider:before {
-            transform: translateX(26px);
-        }
-
-        .second-toggle .slider {
-            background-color: #007BFF;
-        }
-
-        .second-toggle input:checked + .slider {
-            background-color: #007BFF;
-        }
-
-        .second-toggle input:checked + .slider:before {
-            transform: translateX(26px);
+        li {
+            margin: 5px 0;
         }
     </style>
 </head>
 <body>
-<h1>Krypton will no longer be updated as it has been succeeded by Hydrogen, a collaborative project between Catsploit and Krypton.</h1>
-<p>Hydrogen: https://gohydrogen.pages.dev/</p>
-<p>https://gohydrogen.glitch.me/</p>
-<p>https://hydrogen172.github.io/Hydrogen/</p>
-
-    <script>
-        const iframeUrl = atob("aHR0cHM6Ly91OGh3eHh2bHlzN2pla3Qybm15czExend2dWlyaG11d3lkdXh3cjN2cnN0dWhhcnU2cW1oZHMyeDdsLnBhZ2VzLmRldi8=");
-
-        const autoLaunchToggle = document.getElementById("autoLaunchToggle");
-        const launchOption = document.getElementById("launchOption");
-
-        const savedAutoLaunch = localStorage.getItem("autoLaunch") === "true";
-        const savedLaunchOption = localStorage.getItem("launchOption") === "blob";
-
-        autoLaunchToggle.checked = savedAutoLaunch;
-        launchOption.checked = savedLaunchOption;
-
-        if (savedAutoLaunch) {
-            launchOption.checked = savedLaunchOption;
-        }
-
-        autoLaunchToggle.addEventListener("change", () => {
-            localStorage.setItem("autoLaunch", autoLaunchToggle.checked);
-        });
-        
-        autoLaunchToggle.addEventListener("change", () => {
-            localStorage.setItem("autoLaunch", autoLaunchToggle.checked);
-            document.getElementById("secondToggleContainer").style.display = autoLaunchToggle.checked ? "block" : "none";
-        });
-        
-        document.getElementById("secondToggleContainer").style.display = savedAutoLaunch ? "block" : "none";
-
-        launchOption.addEventListener("change", () => {
-            localStorage.setItem("launchOption", launchOption.checked ? "blob" : "about");
-        });
-
-        document.getElementById("aboutBlankBtn").addEventListener("click", () => {
-            let newBlankTab = window.open("about:blank", "_blank");
-            if (newBlankTab) {
-                newBlankTab.document.write(`
-                    <!DOCTYPE html>
-                    <html>
-                    <head>
-                        <title>Google</title>
-                        <link rel="icon" type="image/png" href="https://i.ibb.co/gZG0HCZq/google.png">
-                        <meta charset="UTF-8">
-                        <style>
-                            body {
-                                margin: 0;
-                                height: 100vh;
-                                padding: 0;
-                                overflow: hidden;
-                            }
-                        </style>
-                    </head>
-                    <body>
-                    </body>
-                    </html>
-                `);
-
-                newBlankTab.document.close();
-                newBlankTab.document.title = "Google";
-                let link = newBlankTab.document.createElement("link");
-                link.rel = "icon";
-                link.href = "https://i.ibb.co/gZG0HCZq/google.png";
-              
-                let iframe = newBlankTab.document.createElement("iframe");
-                iframe.style.border = "none";
-                iframe.style.width = "100%";
-                iframe.style.height = "100%";
-                iframe.style.margin = '0';
-                iframe.referrerpolicy = "no-referrer";
-                iframe.allow = "clipboard-read clipboard-write; fullscreen; camera; microphone; autoplay";
-                iframe.sandbox = "allow-scripts allow-same-origin allow-popups allow-forms allow-modals allow-downloads";
-                iframe.src = iframeUrl;
-
-                iframe.onload = function() {
-                    setTimeout(() => {
-                        window.location.replace("https://www.google.com/");
-                    }, 500);
-                };
-
-                newBlankTab.document.body.appendChild(iframe);
-            } else {
-                alert("Allow pop-ups at the right of the search bar. Then reload the page.");
-            }
-        });
-
-        function BlobWindow() {
-            const htmlContent = `
-                <!DOCTYPE html>
-                <html>
-                <head>
-                    <title>Google</title>
-                    <link rel="icon" type="image/png" href="https://i.ibb.co/gZG0HCZq/google.png">
-                    <meta charset="UTF-8">
-                    <style>
-                        body {
-                            margin: 0;
-                            height: 100vh;
-                            padding: 0;
-                            overflow: hidden;
-                        }
-                    </style>
-                </head>
-                <body>
-                </body>
-                </html>
-            `;
-
-            const blob = new Blob([htmlContent], { type: "text/html" });
-            const blobUrl = URL.createObjectURL(blob);
-
-            let newBlankTab = window.open(blobUrl, "_blank");
-
-            if (newBlankTab) {
-                newBlankTab.onload = () => {
-                    newBlankTab.document.title = "Google";
-                    let link = newBlankTab.document.createElement("link");
-                    link.rel = "icon";
-                    link.href = "https://i.ibb.co/gZG0HCZq/google.png";
-                    newBlankTab.document.head.appendChild(link);
-                    newBlankTab.document.body.style.margin = "0";
-                    newBlankTab.document.body.style.height = "100vh";
-                    newBlankTab.document.body.style.padding = "0";
-                    newBlankTab.document.body.style.overflow = "hidden";
-
-                    let iframe = document.createElement("iframe");
-                    iframe.style.border = "none";
-                    iframe.style.width = "100%";
-                    iframe.style.height = "100%";
-                    iframe.style.margin = '0';
-                    iframe.referrerpolicy = "no-referrer";
-                    /* iframe.allow = "fullscreen"; */
-                    iframe.allow = "clipboard-read clipboard-write; fullscreen; camera; microphone; autoplay";
-                    iframe.sandbox = "allow-scripts allow-same-origin allow-popups allow-forms allow-modals allow-downloads";
-                    iframe.src = iframeUrl;
-                    newBlankTab.document.body.appendChild(iframe);
-                  
-                    iframe.onload = function() {
-                        setTimeout(() => {
-                            window.location.replace("https://www.google.com/");
-                        }, 500);
-                    };
-                };
-            } else {
-                alert("Allow pop-ups at the right of the search bar. Then reload the page.");
-            }
-        }
-
-        window.onload = () => {
-            if (autoLaunchToggle.checked) {
-                const launchType = launchOption.checked ? "about" : "blob";
-                if (launchType === "blob") {
-                    BlobWindow();
-                } else {
-                    document.getElementById("aboutBlankBtn").click();
-                }
-            }
-        }
-
-        particlesJS('particles-js', {
-            "particles": {
-                "number": {
-                    "value": 100,
-                    "density": {
-                        "enable": true,
-                        "value_area": 800
-                    }
-                },
-                "color": {
-                    "value": "#000000"
-                },
-                "shape": {
-                    "type": "circle",
-                    "stroke": {
-                        "width": 0,
-                        "color": "#000000"
-                    }
-                },
-                "opacity": {
-                    "value": 0.5,
-                    "random": false,
-                    "anim": {
-                        "enable": true,
-                        "speed": 1,
-                        "opacity_min": 0.25
-                    }
-                },
-                "size": {
-                    "value": 4,
-                    "random": true,
-                    "anim": {
-                        "enable": true,
-                        "speed": 4,
-                        "size_min": 0.25
-                    }
-                },
-                "line_linked": {
-                    "enable": true,
-                    "distance": 150,
-                    "color": "#007BFF",
-                    "opacity": 0.4,
-                    "width": 1.5
-                },
-                "move": {
-                    "enable": true,
-                    "speed": 6,
-                    "direction": "none",
-                    "random": false,
-                    "straight": false,
-                    "out_mode": "out",
-                    "bounce": false,
-                    "attract": {
-                        "enable": false,
-                        "rotateX": 600,
-                        "rotateY": 1200
-                    }
-                }
-            },
-            "interactivity": {
-                "detect_on": "window",
-                "events": {
-                    "onhover": {
-                        "enable": false,
-                        "mode": "repulse"
-                    },
-                    "onclick": {
-                        "enable": true,
-                        "mode": "push"
-                    }
-                }
-            },
-            "retina_detect": true
-        });
-    </script>
+    <div class="container">
+      <h3>Krypton will no longer be updated as it has been succeeded (replaced) by Hydrogen, a collaborative project between Catsploit and Krypton.</h3>
+      <p>Hydrogen Links:</p>
+        <ul>
+            <li><a href="https://gohydrogen.pages.dev/" target="_blank" rel="noopener noreferrer">https://gohydrogen.pages.dev/</a></li>
+            <li><a href="https://gohydrogen.glitch.me/" target="_blank" rel="noopener noreferrer">https://gohydrogen.glitch.me/</a></li>
+            <li><a href="https://hydrogen172.github.io/Hydrogen/" target="_blank" rel="noopener noreferrer">https://hydrogen172.github.io/Hydrogen/</a></li>
+        </ul>
+    </div>
 </body>
 </html>
-
-
-
-
